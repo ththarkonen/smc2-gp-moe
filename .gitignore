@@ -1,8 +1,5 @@
-data
 pics
 densities/*
-results/*
-videos/*
 helpers
 *.asv
 asd*
