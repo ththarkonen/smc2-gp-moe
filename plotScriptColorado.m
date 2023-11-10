@@ -8,8 +8,10 @@ addpath( includeFolders );
 
 [ fileName, folderPath] = uigetfile("*.mat");
 filePath = fullfile( folderPath, fileName);
+psmPath = fullfile( folderPath, "psm.txt");
 
 result = load( filePath );
+PSM = readmatrix( psmPath );
 
 X = result.densities.grids.X;
 Y = result.densities.grids.Y;
@@ -63,7 +65,7 @@ pbaspect([ 1920, 1080, 1])
 
 figure();
 
-image( 255 * flipud( result.posteriorSimilarityMatrix ) );
+image( 255 * flipud( PSM ) );
 colormap( cmap );
 
 ax = gca();

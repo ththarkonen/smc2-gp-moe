@@ -1,5 +1,6 @@
 pics
 densities/*
+results/*/
 helpers
 *.asv
 asd*

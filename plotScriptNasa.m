@@ -3,9 +3,10 @@ clear
 close all
 
 [ fileName, folderPath] = uigetfile("*.mat");
-filePath = fullfile( folderPath, fileName);
+psmPath = fullfile( folderPath, "psm.txt");
 
 result = load( filePath );
+PSM = readmatrix( psmPath );
 
 X = result.densities.grids.X;
 Y = result.densities.grids.Y;
